@@ -1,0 +1,7 @@
+---
+ - name:
+   hosts: webserver
+   gather_facts: false
+   tasks:
+    - name: ping
+      ping:
