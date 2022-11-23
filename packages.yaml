@@ -1,0 +1,10 @@
+---
+- name: Update all packeges and install vim, curl, wget, git
+  hosts: webserver
+  vars: 
+    - yum_pkgs: [ "'*'", "vim", "curl", "wget", "git" ]
+  tasks:
+   - name: Update and install packages
+     yum:
+      name: "{{ yum_pkgs }}"
+      state: latest

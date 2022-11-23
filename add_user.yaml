@@ -1,0 +1,11 @@
+---
+- name: Adding ansible user
+  hosts: webserver
+  gather_facts: true
+  tasks:
+   - name:
+     user:
+       name: ansible
+       shell: /bin/bash
+       groups: wheel
+       append: yes
